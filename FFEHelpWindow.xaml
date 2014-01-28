@@ -1,0 +1,114 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ed="http://schemas.microsoft.com/expression/2010/drawing" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="FstFileEditor.HelpWindow"
+        Title="HelpWindow" Height="508" Width="900" Loaded="Window_Loaded">
+	<Window.Resources>
+		<Storyboard x:Key="RingStoryBoard" RepeatBehavior="Forever">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="arc">
+				<EasingDoubleKeyFrame KeyTime="0" Value="-180"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="180"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="arc1">
+				<EasingDoubleKeyFrame KeyTime="0" Value="180"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="-180"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Offset)" Storyboard.TargetName="arc1">
+				<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+				<EasingDoubleKeyFrame KeyTime="0:0:2" Value="0"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="arc1">
+				<EasingColorKeyFrame KeyTime="0" Value="#FFFFEA00"/>
+				<EasingColorKeyFrame KeyTime="0:0:2" Value="#FFFFEA00"/>
+			</ColorAnimationUsingKeyFrames>
+			<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="arc1">
+				<EasingColorKeyFrame KeyTime="0" Value="#FFEF44C2"/>
+				<EasingColorKeyFrame KeyTime="0:0:2" Value="#FFEF44C2"/>
+			</ColorAnimationUsingKeyFrames>
+		</Storyboard>
+	</Window.Resources>
+	<Window.Triggers>
+		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+			<BeginStoryboard Storyboard="{StaticResource RingStoryBoard}"/>
+		</EventTrigger>
+	</Window.Triggers>
+    <Grid>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="0.075*"/>
+    		<RowDefinition Height="0.925*"/>
+    	</Grid.RowDefinitions>
+        <Grid Margin="0,0,-128,-0.2" HorizontalAlignment="Right" Width="408" Height="32">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="158*" />
+                <ColumnDefinition Width="250*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="18" />
+                <RowDefinition Height="14*" />
+            </Grid.RowDefinitions>
+            <TextBlock Margin="32,0,128,0" TextWrapping="Wrap" FontSize="32" FontFamily="Vijaya" d:LayoutOverrides="VerticalAlignment" Grid.RowSpan="2" Grid.ColumnSpan="2" Height="33" VerticalAlignment="Top"><TextBlock.Background>
+        			<LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+        				<LinearGradientBrush.RelativeTransform>
+        					<TransformGroup>
+        						<ScaleTransform CenterY="0.5" CenterX="0.5"/>
+        						<SkewTransform CenterY="0.5" CenterX="0.5"/>
+        						<RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+        						<TranslateTransform/>
+        					</TransformGroup>
+        				</LinearGradientBrush.RelativeTransform>
+        				<GradientStop Color="#FFCFFFA9" Offset="0"/>
+        				<GradientStop Color="White" Offset="1"/>
+        			</LinearGradientBrush>
+        		</TextBlock.Background><Run Text="FstFileEditor-Help-"/></TextBlock>
+        	<Grid HorizontalAlignment="Right" Width="32" Margin="0,0,128,0" Grid.RowSpan="2" Grid.Column="1">
+        		<ed:Arc x:Name="arc" ArcThickness="4" ArcThicknessUnit="Pixel" EndAngle="270" Stretch="None" Stroke="Black" StartAngle="0" RenderTransformOrigin="0.5,0.5" Margin="0,0,0,-0.534" d:LayoutOverrides="VerticalAlignment">
+        			<ed:Arc.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</ed:Arc.RenderTransform>
+        			<ed:Arc.Fill>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Color="#FF4EF3D9" Offset="0"/>
+        					<GradientStop Color="#FF9841C2" Offset="1"/>
+        				</LinearGradientBrush>
+        			</ed:Arc.Fill>
+        		</ed:Arc>
+        		<ed:Arc x:Name="arc1" ArcThickness="4" ArcThicknessUnit="Pixel" EndAngle="360" Stretch="None" Stroke="Black" StartAngle="90" Margin="4.833,4.465,5,4.5" RenderTransformOrigin="0.5,0.52" d:LayoutOverrides="VerticalAlignment">
+        			<ed:Arc.RenderTransform>
+        				<TransformGroup>
+        					<ScaleTransform/>
+        					<SkewTransform/>
+        					<RotateTransform/>
+        					<TranslateTransform/>
+        				</TransformGroup>
+        			</ed:Arc.RenderTransform>
+        			<ed:Arc.Fill>
+        				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        					<GradientStop Color="#FF4EF3D9" Offset="0"/>
+        					<GradientStop Color="#FF9841C2" Offset="1"/>
+        				</LinearGradientBrush>
+        			</ed:Arc.Fill>
+        		</ed:Arc>
+        	</Grid>
+        </Grid>
+        <Grid Grid.Row="1" HorizontalAlignment="Left" Name="grid1" VerticalAlignment="Top" />
+        <CheckBox Content="常に手前に表示する" Height="32" HorizontalAlignment="Left" Name="checkBox1" VerticalAlignment="Top" Click="checkBox1_Click" Width="129" />
+        <TabControl Grid.Row="1" Name="tabControl1">
+            <TabItem Header="基本事項" Name="tabItem1">
+                <Grid>
+                    <WindowsFormsHost Name="windowsFormsHost1" Margin="0" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="入力部">
+                <WindowsFormsHost Name="windowsFormsHost2" />
+            </TabItem>
+            <TabItem Header="パス登録部">
+                <WindowsFormsHost Name="windowsFormsHost3" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

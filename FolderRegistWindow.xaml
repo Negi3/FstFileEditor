@@ -1,0 +1,11 @@
+﻿<Window x:Class="FstFileEditor.SearchWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="フォルダパスの登録" Height="123" Width="490">
+    <Grid Background="#FFF8F8F8">
+        <Label Content="MMDAgentフォルダパス" Height="28" HorizontalAlignment="Left" Name="label1" VerticalAlignment="Top" />
+        <TextBox Height="24" HorizontalAlignment="Left" Margin="12,22,0,0" Name="FolderPath_TextBox" VerticalAlignment="Top" Width="444" GotFocus="FolderPath_TextBox_GotFocus" Drop="FolderPath_TextBox_Drop" PreviewDragOver="FolderPath_TextBox_PreviewDragOver" TextChanged="FolderPath_TextBox_TextChanged" />
+        <Button Content="フォルダパス登録" Height="23" HorizontalAlignment="Left" Margin="228,52,0,0" Name="FolderRegistOKButton" VerticalAlignment="Top" Width="112" Click="FolderRegistOKButton_Click" />
+        <Button Content="キャンセル" Height="23" HorizontalAlignment="Left" Margin="346,52,0,0" Name="CancelButton" VerticalAlignment="Top" Width="100" Click="CancelButton_Click" />
+    </Grid>
+</Window>

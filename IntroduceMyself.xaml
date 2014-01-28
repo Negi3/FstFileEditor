@@ -1,0 +1,21 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="FstFileEditor.IntroduceMyself"
+        Title="作者について" Height="222" Width="392" MouseDoubleClick="Window_MouseDoubleClick">
+    <Grid>
+    	<Grid.Background>
+    		<RadialGradientBrush>
+    			<GradientStop Color="#FFF08D15"/>
+    			<GradientStop Color="#FF13CAF9" Offset="1"/>
+    			<GradientStop Color="White"/>
+    		</RadialGradientBrush>
+    	</Grid.Background>
+    	<TextBlock HorizontalAlignment="Left" Margin="83.74,64,0,86.21" TextWrapping="Wrap" Text="Twitter:@CST_negi" FontSize="21.333" FontFamily="/FstFileEditor;component/Fonts/#Segoe Script" d:LayoutOverrides="Height"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="8,8,0,0" TextWrapping="Wrap" Text="いかれた作者を紹介するぜ！" VerticalAlignment="Top" FontSize="16" FontFamily="Arial Black"/>
+    	<TextBlock HorizontalAlignment="Right" Margin="0,0,32.566,6" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="18.667" FontFamily="Arial Black"><Run Language="ja-jp" Text="以上だ！"/></TextBlock>
+        <TextBlock HorizontalAlignment="Left" Margin="63.96,0,0,60.866" VerticalAlignment="Bottom" FontSize="16" Text="Site:http://www.negipoyoc.com" 
+		FontFamily="/FstFileEditor;component/Fonts/#Segoe Script">
+		</TextBlock>
+    </Grid>
+</Window>
